@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="notification"
+        android:id="@+id/notification"
+        app:showAsAction="ifRoom"
+        android:onClick="notification"
+        android:orderInCategory="100"
+        android:icon="@drawable/notifications"/>
+
+    <item android:title="wallet"
+        android:onClick="wallet"
+        android:id="@+id/wallet"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/account_balance_wallet"/>
+</menu>
