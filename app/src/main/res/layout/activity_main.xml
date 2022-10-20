@@ -17,7 +17,81 @@
         app:menu="@menu/menu"
         app:title="                         Dream11" />
 
-    <ScrollView
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="5dp"
+        android:background="#e6e6e6"
+        app:tabIndicatorHeight="3.5dp"
+        app:tabIconTint="@color/black"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="#E20B0B"
+        app:tabTextColor="@color/black">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/cricket"
+            android:icon="@drawable/cricket"
+            android:layout_width="wrap_content"
+            android:text="cricket"
+            android:layout_height="wrap_content" >
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/kabaddi"
+            android:layout_width="wrap_content"
+            android:icon="@drawable/wrestling"
+            android:text="kabaddi"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/football"
+            android:layout_width="wrap_content"
+            android:icon="@drawable/soccer_ball_variant"
+            android:layout_height="wrap_content"
+            android:text="Football" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/basketball"
+            android:icon="@drawable/basketball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="basketball" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/baseball"
+            android:icon="@drawable/baseball_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="baseball" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/handball"
+            android:icon="@drawable/handball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="handball" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/volletball"
+            android:icon="@drawable/volleyball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="volleyball" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment_Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include1"
+        android:layout_marginTop="5dp"
+        android:scrollbars="vertical" />
+
+
+    <!--<ScrollView
         android:layout_width="match_parent"
         android:layout_below="@+id/toolbar"
         android:scrollbars="horizontal"
@@ -233,8 +307,5 @@
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
-
-    </ScrollView>
-
-
+    </ScrollView>-->
 </RelativeLayout>
