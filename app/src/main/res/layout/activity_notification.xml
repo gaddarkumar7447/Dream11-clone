@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#e7e7e7"
     android:layout_height="match_parent"
-    tools:context=".Notification">
+    tools:context=".notification.Notification">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarOfNoteDetails"
@@ -30,16 +30,56 @@
             android:text="NOTIFICATION"
             android:layout_marginLeft="30dp"
             android:layout_gravity="start"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-    <ListView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/show"
+        android:padding="5dp"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/toolbarOfNoteDetails"
+        android:layout_height="35dp">
+
+        <TextView
+            android:layout_width="320dp"
+            android:width="5dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:text="You have unread notifications."
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="16dp"
+            android:id="@+id/filter"
+            android:onClick="filter"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:src="@drawable/menu_bar" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:maxWidth="1dp"
+            android:onClick="snakbarShow"
+            android:id="@+id/showSnakbar"
+            android:layout_marginStart="25dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:maxHeight="10sp"
+            android:src="@drawable/more" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/notificationView"
-        android:layout_below="@+id/toolbarOfNoteDetails"
-        android:layout_height="match_parent"/>
+        android:layout_below="@+id/show"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </RelativeLayout>
