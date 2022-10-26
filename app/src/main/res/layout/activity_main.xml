@@ -1,311 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#e7e7e7"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#F12727"
-        android:clickable="true"
-        android:focusable="true"
-        app:menu="@menu/menu"
-        app:title="                         Dream11" />
+    <data>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/include1"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_below="@id/toolbar"
-        android:layout_marginTop="5dp"
-        android:background="#e6e6e6"
-        app:tabIndicatorHeight="3.5dp"
-        app:tabIconTint="@color/black"
-        app:tabMode="scrollable"
-        app:tabSelectedTextColor="#E20B0B"
-        app:tabTextColor="@color/black">
+    </data>
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/cricket"
-            android:icon="@drawable/cricket"
-            android:layout_width="wrap_content"
-            android:text="cricket"
-            android:layout_height="wrap_content" >
-        </com.google.android.material.tabs.TabItem>
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/kabaddi"
-            android:layout_width="wrap_content"
-            android:icon="@drawable/wrestling"
-            android:text="kabaddi"
-            android:layout_height="wrap_content"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/football"
-            android:layout_width="wrap_content"
-            android:icon="@drawable/soccer_ball_variant"
-            android:layout_height="wrap_content"
-            android:text="Football" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/basketball"
-            android:icon="@drawable/basketball"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="basketball" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/baseball"
-            android:icon="@drawable/baseball_ball"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="baseball" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/handball"
-            android:icon="@drawable/handball"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="handball" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/volletball"
-            android:icon="@drawable/volleyball"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="volleyball" />
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/fragment_Container"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/include1"
-        android:layout_marginTop="5dp"
-        android:scrollbars="vertical" />
+        android:background="#e7e7e7"
+        tools:context=".MainActivity">
 
-
-    <!--<ScrollView
-        android:layout_width="match_parent"
-        android:layout_below="@+id/toolbar"
-        android:scrollbars="horizontal"
-        android:layout_height="44dp">
-
-        <RelativeLayout
-            android:id="@+id/matches"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_marginTop="3dp">
+            android:layout_height="50dp"
+            android:background="#F12727"
+            android:clickable="true"
+            android:focusable="true"
+            app:menu="@menu/menu"
+            app:title="                         Dream11" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="match_parent">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/include1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="5dp"
+            android:background="#e6e6e6"
+            app:tabIndicatorHeight="3.5dp"
+            app:tabIconTint="@color/black"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#E20B0B"
+            app:tabTextColor="@color/black">
 
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/cricket"
+                android:icon="@drawable/cricket"
+                android:layout_width="wrap_content"
+                android:text="cricket"
+                android:layout_height="wrap_content">
+            </com.google.android.material.tabs.TabItem>
 
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/kabaddi"
+                android:layout_width="wrap_content"
+                android:icon="@drawable/wrestling"
+                android:text="kabaddi"
+                android:layout_height="wrap_content" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/football"
+                android:layout_width="wrap_content"
+                android:icon="@drawable/soccer_ball_variant"
+                android:layout_height="wrap_content"
+                android:text="Football" />
 
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/basketball"
+                android:icon="@drawable/basketball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="basketball" />
 
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/baseball"
+                android:icon="@drawable/baseball_ball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="baseball" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/handball"
+                android:icon="@drawable/handball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="handball" />
 
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/volletball"
+                android:icon="@drawable/volleyball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="volleyball" />
 
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
+        </com.google.android.material.tabs.TabLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/fragment_Container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/include1"
+            android:layout_marginTop="5dp"
+            android:scrollbars="vertical" />
 
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/frame_layout"
+            android:layout_below="@+id/include1"
+            android:layout_above="@+id/bottom_navigation"
+            android:layout_height="match_parent" />
 
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:id="@+id/bottom_navigation"
+            android:layout_margin="5dp"
+            android:background="@drawable/bootom_navigation_color"
+            app:itemIconTint="@color/black"
+            app:menu="@menu/botton_navigation_bar"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cricket" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cricket"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15dp" />
-                </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
-    </ScrollView>-->
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

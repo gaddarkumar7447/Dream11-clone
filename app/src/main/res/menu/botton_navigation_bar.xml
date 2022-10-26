@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:title="Home"
+    android:id="@+id/home"
+    app:showAsAction="always"
+    android:iconTint="@color/black"
+    android:icon="@drawable/home"/>
+
+    <item android:title="My matches"
+        app:showAsAction="always"
+        android:iconTint="@color/black"
+        android:icon="@drawable/trophy"
+        android:id="@+id/my_matches"/>
+
+    <item android:title="Rewards"
+        android:id="@+id/Rewards"
+        android:iconTint="@color/black"
+        app:showAsAction="always"
+        android:icon="@drawable/gift"/>
+
+    <item android:title="Chats"
+        android:id="@+id/chats"
+        android:iconTint="@color/black"
+        app:showAsAction="always"
+        android:icon="@drawable/chat"/>
+
+    <item android:title="Winner"
+        android:id="@+id/winner"
+        app:showAsAction="always"
+        android:iconTint="@color/black"
+        android:icon="@drawable/medal"/>
+
+</menu>
